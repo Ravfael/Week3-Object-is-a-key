@@ -85,6 +85,36 @@ Diberikan sebuah function cariModus(arr) yang menerima sebuah array angka. Funct
 */
 function cariModus(arr) {
   // you can only write your code here!
+  let hasil = {};
+
+  for (let i = 0; i < arr.length; i++) {
+    let angka = arr[i];
+
+    if (hasil[angka]) {
+      hasil[angka]++;
+    } else {
+      hasil[angka] = 1;
+    }
+  }
+
+  let modus = null;
+  let maxFrekuensi = 0;
+
+  for (let key in hasil) {
+    if (hasil[key] > maxFrekuensi) {
+      maxFrekuensi = hasil[key];
+      modus = Number(key);
+    }
+  }
+
+  if (maxFrekuensi === 1) {
+    return -1;
+  }
+
+  if (Object.keys(hasil).length === 1) {
+    return -1;
+  }
+  return modus;
 }
 
 // TEST CASES
