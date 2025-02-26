@@ -71,7 +71,7 @@ function naikAngkot(arrPenumpang) {
 
     let indexNaik = rute.indexOf(naikDari);
     let indexTurun = rute.indexOf(tujuan);
-    let bayar = (indexTurun - indexNaik) * 2000; //apakah bisa ditambah?, bukan di kurang?
+    let bayar = (indexTurun - indexNaik) * 2000;
 
     hasil.push({
       penumpang: namaPenumpang,
